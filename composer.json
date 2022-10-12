@@ -1,0 +1,28 @@
+{
+    "name": "milito/response-generator",
+    "description": "I use this package to make it easier to modify the structure of json responses.",
+    "keywords": ["laravel", "json", "response" , "milito", "structure"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Milito",
+            "email": "milad.purahmad78@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "^7.3|^8.0|^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Milito\\ResponseGenerator\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra" :{
+
+    }
+}
