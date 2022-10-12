@@ -1,19 +1,36 @@
 <?php
 namespace Milito\ResponseGenerator;
 
+use Milito\ResponseGenerator\Exceptions\InvalidResponseTypeException;
+use Milito\ResponseGenerator\States\Failed\FailedState;
+use Milito\ResponseGenerator\States\Success\SuccessState;
+
 class MilitoResponseGenerator
 {
-    public function success()
+    /**
+     * @return SuccessState
+     * @throws InvalidResponseTypeException
+     */
+    public function success() : SuccessState
     {
         return $this->start("success");
     }
 
-    public function failed()
+    /**
+     * @return FailedState
+     * @throws InvalidResponseTypeException
+     */
+    public function failed() : FailedState
     {
         return $this->start("failed");
     }
 
-    private function start(string $type)
+    /**
+     * @param string $type
+     * @return FailedState|SuccessState
+     * @throws InvalidResponseTypeException
+     */
+    private function start(string $type): FailedState|SuccessState
     {
         return Factory::create($type);
     }
