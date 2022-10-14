@@ -76,7 +76,7 @@ use Milito\ResponseGenerator\Facades\MilitoResponseGenerator;
 
 Route::get('/', function () {
     return MilitoResponseGenerator::failed()
-            ->code(\Illuminate\Http\Response::HTTP_INTERNAL_SERVER_ERROR) // Sets the `Http Status code` field of response to `SERCER_ERROR` (500).
+            ->code(\Illuminate\Http\Response::HTTP_INTERNAL_SERVER_ERROR) // Sets the `Http Status code` field of response to `SERVER_ERROR` (500).
             ->message("Error Response message") // Sets the `message` field of response.
             ->errors(["Yeah this is error"]) // Sets the `error` & the `errors` fields of response.
             ->send(); // Generates the response as a `json` response.
@@ -187,9 +187,15 @@ We will have the following functions for `FailedState` (This is an object) :
 
 
 ## Publish config
-Use the following command to publish the config file to change the response fields name or makes some fileds hidden from the response :
+Use the following command to publish the config file to change the response fields name or makes some fields hidden from the response :
 ```sh
 php artisan vendor:publish --tag=milito-response-config
+```
+
+## Test
+Use the following command to run tests:
+```sh
+composer test
 ```
 
 
