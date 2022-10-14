@@ -1,9 +1,10 @@
 <?php
 namespace Milito\ResponseGenerator\Test;
 
-use Milito\ResponseGenerator\MilitoResponseGenerator;
+use Milito\ResponseGenerator\Providers\MilitoResponseGeneratorServiceProvider;
 
 class TestCase extends  \Orchestra\Testbench\TestCase{
+
     public function setUp(): void
     {
       parent::setUp();
@@ -13,7 +14,7 @@ class TestCase extends  \Orchestra\Testbench\TestCase{
     protected function getPackageProviders($app)
     {
       return [
-        MilitoResponseGenerator::class,
+        MilitoResponseGeneratorServiceProvider::class,
       ];
     }
 
