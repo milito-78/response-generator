@@ -1,7 +1,6 @@
-[![Latest Stable Version](https://poser.pugx.org/milito/response-generator/version)](https://packagist.org/packages/milito/response-generator)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/milito/response-generator.svg?style=flat-square)](https://packagist.org/packages/milito/response-generator)
 [![Total Downloads](https://poser.pugx.org/milito/response-generator/downloads)](https://packagist.org/packages/milito/response-generator)
-[![Latest Unstable Version](https://poser.pugx.org/milito/response-generator/v/unstable)](https://packagist.org/packages/milito/response-generator)
-[![License](https://poser.pugx.org/milito/response-generator/license)](https://packagist.org/packages/milito/response-generator)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://packagist.org/packages/milito/response-generator)
 
 # Response Generator
 ## _Json Response Generator for Laravel Projects_
